@@ -142,10 +142,13 @@
     <Compile Include="Assets\Scripts\UnityLibraries-master\Audio\AudioManager .cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Audio\AudioSourceController.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Audio\SoundBank.cs" />
+    <Compile Include="Assets\Scripts\UnityLibraries-master\CameraActionBoxFollower.cs" />
+    <Compile Include="Assets\Scripts\UnityLibraries-master\CameraActionFollowPerspective.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Float extensions\ClampedFloat.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Float extensions\LerpValue.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Float extensions\RandomFloat.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Float extensions\SinAnimation.cs" />
+    <Compile Include="Assets\Scripts\UnityLibraries-master\HealthUI.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Managers\EventConst.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Managers\EventManager.cs" />
     <Compile Include="Assets\Scripts\UnityLibraries-master\Managers\PoolManager\PoolConst.cs" />
@@ -403,6 +406,15 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.0f2/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows_Lib">
+      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Advertisements">
       <HintPath>D:/User/Desktop/Projects/CreativeJam13/Library/PackageCache/com.unity.ads@2.3.1/Runtime/UnityEngine.Advertisements.dll</HintPath>
     </Reference>
@@ -417,15 +429,6 @@
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
       <HintPath>D:/User/Desktop/Projects/CreativeJam13/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
-    </Reference>
-    <Reference Include="Rewired_Windows_Lib">
-      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows_Lib.dll</HintPath>
-    </Reference>
-    <Reference Include="Rewired_Core">
-      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
-    </Reference>
-    <Reference Include="DOTween">
-      <HintPath>D:/User/Desktop/Projects/CreativeJam13/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2018.3.0f2/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
