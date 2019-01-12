@@ -13,6 +13,7 @@ public class CameraActionFollowPerspective : MonoBehaviour {
 	public Vector3 CameraAjust;
 	
 	Camera currentCamera;
+    private bool isInit;
 	
 	void Awake()
 	{
@@ -21,16 +22,28 @@ public class CameraActionFollowPerspective : MonoBehaviour {
 		currentCamera = GetComponent<Camera>();
 	}
 	
-	
 	void Update()
 	{
+        if (isInit)
+        {
+            Rect boundingBox = CalculateTargetsBoundingBox();
 
-		Rect boundingBox = CalculateTargetsBoundingBox();
-
-		transform.position = Vector3.Lerp(transform.position,CalculateCameraPosition(boundingBox),moveSpeed * Time.deltaTime);
-		currentCamera.fieldOfView = CalculateFieldOfView(boundingBox);
-
+            transform.position = Vector3.Lerp(transform.position, CalculateCameraPosition(boundingBox), moveSpeed * Time.deltaTime);
+            currentCamera.fieldOfView = CalculateFieldOfView(boundingBox);
+        }
 	}
+
+    public void SetTargets(List<Transform> targets)
+    {
+        this.targets = targets;
+        isInit = true;
+    }
+
+    public void ResetTargets()
+    {
+        isInit = false;
+        targets.Clear();
+    }
 	
 	/// <summary>
 	/// Calculates a bounding box that contains all the targets.

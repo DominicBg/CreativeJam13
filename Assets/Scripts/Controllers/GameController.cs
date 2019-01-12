@@ -7,6 +7,11 @@ public class GameController : Singleton<GameController>
     public enum GameState { Menu, GamePlay, GameOver, Transition}
     [SerializeField] GameState gameState;
 
+    private void Start()
+    {
+        StartState(GameState.Menu);
+    }
+
     public void StartState(GameState state)
     {
         gameState = state;
@@ -18,7 +23,7 @@ public class GameController : Singleton<GameController>
                 break;
             case GameState.GamePlay:
                 GameData gameData = GenerateGameData();
-                EventManager.Invoke<GameData>(EventConst.OnGameOverStart, gameData);
+                EventManager.Invoke<GameData>(EventConst.OnGamePlayStart, gameData);
                 break;
             case GameState.GameOver:
                 EventManager.Invoke(EventConst.OnGameOverStart);
@@ -34,7 +39,7 @@ public class GameController : Singleton<GameController>
                 EventManager.Invoke(EventConst.OnMenuEnd);
                 break;
             case GameState.GamePlay:
-                EventManager.Invoke(EventConst.OnGameOverEnd);
+                EventManager.Invoke(EventConst.OnGamePlayEnd);
                 break;
             case GameState.GameOver:
                 EventManager.Invoke(EventConst.OnGameOverEnd);

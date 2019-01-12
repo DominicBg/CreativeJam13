@@ -5,4 +5,5 @@ using UnityEngine;
 public class GameData
 {
     //Player list etc
+    public int numberPlayer = 4;
 }
