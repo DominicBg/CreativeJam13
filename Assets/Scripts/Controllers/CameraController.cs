@@ -12,12 +12,12 @@ public class CameraController : MonoBehaviour
 
     }
 
-    private void ActivateBoxFollower(List<Player> players)
+    /*private void ActivateBoxFollower(List<Player> players)
     {
         var targetList = players.ConvertAll(x => x.transform);
 
         cameraActionFollowPerspective.SetTargets(targetList);
-    }
+    }*/
 
     private void SetTargetsToBox()
     {
